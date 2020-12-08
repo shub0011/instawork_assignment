@@ -7,5 +7,6 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^userbase/', include('userbase.urls')),
     
 ]
