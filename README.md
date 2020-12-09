@@ -27,6 +27,14 @@ You’ll start by editing this README file to learn how to edit a file in Bitbuc
 4. Consequently for deleting them 
 	`http://localhost:8000/userbase/users/4`
 	press on DELETE
+5. Use curl to POST like this 
+	curl -H "Content-Type: application/json" -d '{
+    "first_name": "asma",
+    "last_name": "kumari",
+    "phone_number": "785764837",
+    "email": "rehan@balwan.com",
+    "role": "A"
+}' -X POST  http://localhost:8000/userbase/users
 ---
 
 ## More Additions that could have been done
