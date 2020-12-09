@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_PASSWORD=dsdbadmin
+      - POSTGRES_DB=tm_v1.1
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  backend:
+    build: .
+    volumes:
+      - .:/assignment
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:

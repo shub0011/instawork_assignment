@@ -1,0 +1,6 @@
+backports.functools-lru-cache==1.6.1
+Django==1.8.18
+djangorestframework==3.2.3
+psycopg2-binary
+soupsieve==1.9.5
+virtualenv==16.0.0
